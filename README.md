@@ -13,5 +13,5 @@ This is a website concept for the French youtubeur Squeezie because his current 
 
 in this file, please replace:
 
-`YOUR_FONT_AWESOME_KIT_URL` *(line 8)*: Replace by your Font Awesome kit.
+`YOUR_FONT_AWESOME_KIT_URL` *(line 8)*: Replace by your Font Awesome kit. 
 `YOUR_GOOGLE_API_KEY` *(line 49)*: Replace by Google API key (YouTube v3).
