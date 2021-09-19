@@ -5,6 +5,6 @@ This is a website concept for the French youtubeur Squeezie because his current 
 
 ## Screenshots
 
-[https://github.com/euzzeud/Squeezie.fr/blob/main/images/screenshot.png?raw=true](Screenshot)
+![Screenshot](https://github.com/euzzeud/Squeezie.fr/blob/main/images/screenshot.png?raw=true)
 
 *Page reduced to 80% to fully appear in the screenshot.*
