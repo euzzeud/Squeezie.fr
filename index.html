@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="YOUR_FONT_AWESOME_KIT_URL" crossorigin="anonymous"></script>
+    <title>SQUEEZIE - Site officiel</title>
+</head>
+<body>
+    <section class="top-page">
+        <div class="logo">
+            <img src="./images/logo.jpg" alt="Squeezie" class="avatar">
+            <h1 class="big-title">Squeezie</h1>
+        </div>
+            <p class="description">Lucas Hauchard, né le 27 janvier 1996 à Vitry-sur-Seine, plus connu sous le pseudonyme Squeezie, est un vidéaste et streamer français.
+                <br>
+                Il propose depuis 2011 sur ses chaînes YouTube et sa chaîne Twitch des let's play, des vidéos humoristiques, des clips musicaux ainsi que des vidéos réactions.
+                <br>
+                <span style="font-size: 10px;">Oui... ce petit paragraphe vient de <a style="text-decoration: none; color: black;"  target="_blank" href="https://fr.wikipedia.org/wiki/Squeezie">Wikipédia</a>.</span>
+            </p>
+        <br>
+        <div class="socials">
+            <ul>
+                <li class="social-item"><a href="https://www.youtube.com/channel/UCWeg2Pkate69NFdBeuRFTAw" target="_blank" class="social-item-link"><i class="fab fa-youtube icon"></i> Youtube</a></li>
+                <li class="social-item"><a href="https://www.twitch.tv/squeezie" target="_blank" class="social-item-link"><i class="fab fa-twitch icon"></i> Twitch</a></li>
+                <li class="social-item"><a href="https://twitter.com/xsqueezie" target="_blank" class="social-item-link"><i class="fab fa-twitter icon"></i> Twitter</a></li>
+                <li class="social-item"><a href="https://www.instagram.com/xsqueezie" target="_blank" class="social-item-link"><i class="fab fa-instagram icon"></i> Instagram</a></li>
+                <li class="social-item"><a href="https://oxyz.fr" target="_blank" class="social-item-link"><i class="fas fa-music icon"></i> Oxyz</a></li>
+            </ul>
+        </div>
+        <br>
+        <div class="container">
+            <div class="video-display">
+                <h2 class="title">Dernière vidéo</h2>
+                <iframe  class="video-player" id="video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-display">
+                <h2 class="title">Dernière vidéo de la chaîne gaming</h2>
+                <iframe  class="video-player" id="video-gaming" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <p id="attribution">Développé avec <i class="fas fa-heart"></i> par <a style="color: white; text-decoration-style: dashed;" href="https://euzzeud.x-h.fr" target="_blank" title="Euzzeud" aria-label="Euzzeud">Euzzeud</a></p>
+    </section>
+    <script>
+        var APIkey = "YOUR_GOOGLE_API_KEY"
+        var channelSelected;
+
+        document.addEventListener("DOMContentLoaded", getLastVideos())
+
+        function getLastVideos(){
+                // First, get the last video of main channel.
+                fetch(`https://www.googleapis.com/youtube/v3/search?key=${APIkey}&channelId=UCWeg2Pkate69NFdBeuRFTAw&part=snippet,id&order=date&maxResults=1`)
+                    .then(response => response.json())
+                    .then(json => {
+                        document.getElementById("video").src = "https://www.youtube.com/embed/" + json.items[0].id.videoId
+                    })
+
+                // After, get the last video of gaming channel.
+                fetch(`https://www.googleapis.com/youtube/v3/search?key=${APIkey}&channelId=UCY-_QmcW09PHAImgVnKxU2g&part=snippet,id&order=date&maxResults=1`)
+                    .then(response => response.json())
+                    .then(json => {
+                        document.getElementById("video-gaming").src = "https://www.youtube.com/embed/" + json.items[0].id.videoId
+                    })
+        }
+
+    </script>
+</body>
+</html>

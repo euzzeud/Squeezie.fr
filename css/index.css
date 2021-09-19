@@ -1,0 +1,107 @@
+* {
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(245,171,196,1) 45%, rgba(0,212,255,1) 100%);;
+}
+
+section.top-page {
+    text-align: center;
+}
+
+img.avatar {
+    width: 110px;
+    border: solid 10px white;
+    border-radius: 100px;
+}
+
+h1.big-title {
+    text-transform: uppercase;
+    font-size: 45px;
+    color: white;
+    font-style: italic;
+}
+
+p.description {
+    font-style: italic;
+}
+
+li.social-item {
+    list-style-type: none;
+    display: inline;
+    margin: 5px;
+    font-size: 20px;
+    padding: 10px;
+    border: solid 1px transparent;
+    border-radius: 15px;
+}
+
+li.social-item:hover {
+    background-color: white;
+}
+
+a.social-item-link {
+    color: black;
+    text-decoration: none;
+}
+
+div.container {
+    display: inline-flex;
+}
+
+h2.title {
+    text-transform: uppercase;
+    color: white;
+}
+
+.video-display {
+    border: solid 5px white;
+    border-radius: 20px;
+    margin:20px;
+    width: 560px;
+    height: 383px;
+}
+
+.video-player {
+    border-radius: 20px;
+}
+
+section.footer {
+    text-align: center;
+}
+
+#attribution {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Icônes */
+
+.fa-youtube {
+    color: red;
+}
+
+.fa-twitch {
+    color:#6441a5;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-instagram {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    border-radius: 10px;
+}
+
+.fa-music {
+    color: blueviolet;
+}
+
+.fa-heart {
+    color: red;
+}
